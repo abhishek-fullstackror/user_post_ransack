@@ -1,0 +1,13 @@
+<%= search_form_for @search do |f| %>
+    <%= tag.fieldset do %>
+      <%= tag.legend 'User' %>
+      <%= tag.ul do %>
+        <%= tag.li do %>
+          <%= f.label :name_or_email_cont %>
+          <%= f.text_field :name_or_email_cont %>
+        <% end %>
+              <% end %>
+    <% end %>
+    <%= f.submit class: 'btn btn--invert' %>
+<%end%>
+<%= render 'results' %>
